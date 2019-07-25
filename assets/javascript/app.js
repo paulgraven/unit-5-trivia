@@ -178,14 +178,62 @@ var questions = {
   }
 };
 
-function addQuestions() {
-  for (var i = 1; i < 6; i++) {
-    $("#question" + i).append(questions[i].question);
-    $("#q" + i + "Choice0").append(questions[i].choices[0]);
-    $("#q" + i + "Choice1").append(questions[i].choices[1]);
-    $("#q" + i + "Choice2").append(questions[i].choices[2]);
-    $("#q" + i + "Choice3").append(questions[i].choices[3]);
+var intervalId;
+var clockRunning = false;
+var time = 10;
+
+window.onload = function() {
+  $("#newGame").on("click", start);
+};
+
+function start() {
+  if (!clockRunning) {
+    time = 10;
+    intervalId = setInterval(count, 1000);
+    clockRunning = true;
+  }
+  addQuestions();
+}
+
+function count() {
+  time--;
+  $("#timeRemaining").text("Time Remaining: " + time);
+  if (time <= 0) {
+    stop();
+    alert("Time is up!");
   }
 }
 
-addQuestions();
+function stop() {
+  clearInterval(intervalId);
+  clockRunning = false;
+}
+
+function addQuestions() {
+  var questionNumber = Math.floor(Math.random() * 20);
+  $("#question").text(questions[questionNumber].question);
+
+  var choiceButtonA = $('<input type="radio" id="A" />');
+  var choiceTextA = questions[questionNumber].choices[0];
+  $("#choiceA").text(choiceTextA);
+  choiceButtonA.prependTo("#choiceA");
+
+  var choiceButtonB = $('<input type="radio" name="B" />');
+  var choiceTextB = questions[questionNumber].choices[1];
+  $("#choiceB").text(choiceTextB);
+  choiceButtonB.prependTo("#choiceB");
+
+  var choiceButtonC = $('<input type="radio" name="C" />');
+  var choiceTextC = questions[questionNumber].choices[2];
+  $("#choiceC").text(choiceTextC);
+  choiceButtonC.prependTo("#choiceC");
+
+  var choiceButtonD = $('<input type="radio" name="D" />');
+  var choiceTextD = questions[questionNumber].choices[3];
+  $("#choiceD").text(choiceTextD);
+  choiceButtonD.prependTo("#choiceD");
+
+  // var radio = document.getElementById("radioA").checked;
+  // console.log(radio);
+  // console.log($("input[name=B]:checked").val());
+}

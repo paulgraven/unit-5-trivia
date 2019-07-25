@@ -20,107 +20,17 @@
     <div class="container">
       <h1>Trivia Game!!</h1>
       <hr />
-      <div class="row" id="timeRemaining">
-        Time Remaining:
-      </div>
+      <button id="newGame">Start New Game!</button>
       <hr />
-      <div class="row" id="question1">
-        Question 1:
-      </div>
+      <div class="row" id="timeRemaining"></div>
+      <hr />
+      <div class="row" id="question"></div>
       <br />
       <div class="row">
-        <div class="col-3" id="q1Choice0">
-          <input type="radio" name="radio1" />
-        </div>
-        <div class="col-3" id="q1Choice1">
-          <input type="radio" name="radio1" />
-        </div>
-        <div class="col-3" id="q1Choice2">
-          <input type="radio" name="radio1" />
-        </div>
-        <div class="col-3" id="q1Choice3">
-          <input type="radio" name="radio1" />
-        </div>
-      </div>
-      <hr />
-
-      <div class="row" id="question2">
-        Question 2:
-      </div>
-      <br />
-      <div class="row">
-        <div class="col-3" id="q2Choice0">
-          <input type="radio" name="radio2" />
-        </div>
-        <div class="col-3" id="q2Choice1">
-          <input type="radio" name="radio2" />
-        </div>
-        <div class="col-3" id="q2Choice2">
-          <input type="radio" name="radio2" />
-        </div>
-        <div class="col-3" id="q2Choice3">
-          <input type="radio" name="radio2" />
-        </div>
-      </div>
-      <hr />
-
-      <div class="row" id="question3">
-        Question 3:
-      </div>
-      <br />
-      <div class="row">
-        <div class="col-3" id="q3Choice0">
-          <input type="radio" name="radio3" />
-        </div>
-        <div class="col-3" id="q3Choice1">
-          <input type="radio" name="radio3" />
-        </div>
-        <div class="col-3" id="q3Choice2">
-          <input type="radio" name="radio3" />
-        </div>
-        <div class="col-3" id="q3Choice3">
-          <input type="radio" name="radio3" />
-        </div>
-      </div>
-      <hr />
-
-      <div class="row" id="question4">
-        Question 4:
-      </div>
-      <br />
-      <div class="row">
-        <div class="col-3" id="q4Choice0">
-          <input type="radio" name="radio4" />
-        </div>
-        <div class="col-3" id="q4Choice1">
-          <input type="radio" name="radio4" />
-        </div>
-        <div class="col-3" id="q4Choice2">
-          <input type="radio" name="radio4" />
-        </div>
-        <div class="col-3" id="q4Choice3">
-          <input type="radio" name="radio4" />
-        </div>
-      </div>
-      <hr />
-
-      <div class="row" id="question5">
-        Question 5:
-      </div>
-      <br />
-      <div class="row">
-        <div class="col-3" id="q5Choice0">
-          <input type="radio" name="radio5" />
-        </div>
-        <div class="col-3" id="q5Choice1">
-          <input type="radio" name="radio5" />
-        </div>
-        <div class="col-3" id="q5Choice2">
-          <input type="radio" name="radio5" />
-        </div>
-        <div class="col-3" id="q5Choice3">
-          <input type="radio" name="radio5" />
-        </div>
+        <div class="col-3" id="choiceA"></div>
+        <div class="col-3" id="choiceB"></div>
+        <div class="col-3" id="choiceC"></div>
+        <div class="col-3" id="choiceD"></div>
       </div>
       <hr />
     </div>
@@ -130,4 +40,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- js file -->
   <script src="assets/javascript/app.js"></script>
+  <script src="assets/javascript/questions_answers.js"></script>
 </html>
