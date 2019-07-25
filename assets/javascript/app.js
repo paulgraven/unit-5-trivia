@@ -243,9 +243,9 @@ function addQuestions() {
   // console.log($("input[name=B]:checked").val());
 }
 
-$(document).on("change", function winLose() {
-  if (document.getElementById("A").checked) {
-    alert("Correct!!");
-    console.log(questionNumber);
-  }
+// $(document).on("change", function winLose() {
+//   if (document.getElementById("A").checked) {
+//     alert("Correct!!");
+//     console.log(questionNumber);
+//   }
 });
