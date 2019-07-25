@@ -248,4 +248,4 @@ function addQuestions() {
 //     alert("Correct!!");
 //     console.log(questionNumber);
 //   }
-});
+// });
