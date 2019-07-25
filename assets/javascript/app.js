@@ -243,6 +243,7 @@ function addQuestions() {
   // console.log($("input[name=B]:checked").val());
 }
 
+// TEST
 // $(document).on("change", function winLose() {
 //   if (document.getElementById("A").checked) {
 //     alert("Correct!!");
