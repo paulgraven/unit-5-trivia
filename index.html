@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Trivia Game!</title>
 
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="assets/css/reset.css" />
     <!-- Bootstrap -->
     <link
       rel="stylesheet"
@@ -13,26 +15,35 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <!-- CSS Reset -->
-    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="container-fluid">
       <h1>Trivia Game!!</h1>
+      <hr />
+      <div class="row">
+        <div class="col" id="timeRemaining">Click the blue button to start a new game!</div>
+      </div>
       <hr />
       <button id="newGame">Start New Game!</button>
       <hr />
-      <div class="row" id="timeRemaining"></div>
-      <hr />
-      <div class="row" id="question"></div>
+
+      <div class="row">
+        <div class="col" id="question"></div>
+      </div>
       <br />
       <div class="row">
-        <div class="col-3" id="choiceA"></div>
-        <div class="col-3" id="choiceB"></div>
-        <div class="col-3" id="choiceC"></div>
-        <div class="col-3" id="choiceD"></div>
+        <div class="col" id="choiceA"></div>
+        <div class="col" id="choiceB"></div>
+        <div class="col" id="choiceC"></div>
+        <div class="col" id="choiceD"></div>
       </div>
       <hr />
+      <div class="row">
+        <div class="col-4" id="correct">Correct:</div>
+        <div class="col-4" id="wrong">Wrong:</div>
+      </div>
     </div>
   </body>
 

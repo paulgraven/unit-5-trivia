@@ -1,0 +1,25 @@
+body {
+  background-image: url("trivia.jpg");
+  text-align: center;
+}
+
+h1 {
+  font-size: 300%;
+}
+.container-fluid {
+  align: center;
+  color: white;
+  font-size: 150%;
+}
+
+#timeRemaining {
+  font-size: 150%;
+  text-align: left;
+  background-color: green;
+}
+
+button {
+  background-color: blue;
+  color: white;
+  font-size: 150%;
+}

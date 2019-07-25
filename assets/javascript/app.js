@@ -187,6 +187,7 @@ window.onload = function() {
 };
 
 function start() {
+  stop();
   if (!clockRunning) {
     time = 10;
     intervalId = setInterval(count, 1000);
@@ -213,27 +214,38 @@ function addQuestions() {
   var questionNumber = Math.floor(Math.random() * 20);
   $("#question").text(questions[questionNumber].question);
 
-  var choiceButtonA = $('<input type="radio" id="A" />');
+  var choiceButtonA = $('<input type="radio" id="A" name="radiobtn" />');
   var choiceTextA = questions[questionNumber].choices[0];
   $("#choiceA").text(choiceTextA);
   choiceButtonA.prependTo("#choiceA");
 
-  var choiceButtonB = $('<input type="radio" name="B" />');
+  var choiceButtonB = $('<input type="radio" id="B" name="radiobtn" />');
   var choiceTextB = questions[questionNumber].choices[1];
   $("#choiceB").text(choiceTextB);
   choiceButtonB.prependTo("#choiceB");
 
-  var choiceButtonC = $('<input type="radio" name="C" />');
+  var choiceButtonC = $('<input type="radio" id="C" name="radiobtn" />');
   var choiceTextC = questions[questionNumber].choices[2];
   $("#choiceC").text(choiceTextC);
   choiceButtonC.prependTo("#choiceC");
 
-  var choiceButtonD = $('<input type="radio" name="D" />');
+  var choiceButtonD = $('<input type="radio" id="D" name="radiobtn" />');
   var choiceTextD = questions[questionNumber].choices[3];
   $("#choiceD").text(choiceTextD);
   choiceButtonD.prependTo("#choiceD");
 
-  // var radio = document.getElementById("radioA").checked;
-  // console.log(radio);
+  var radio = document.getElementById("A").checked;
+  console.log(radio);
+
+  var rad = $("input[type='radio'][name='radiobtn']:checked").val();
+  console.log(rad);
+
   // console.log($("input[name=B]:checked").val());
 }
+
+$(document).on("change", function winLose() {
+  if (document.getElementById("A").checked) {
+    alert("Correct!!");
+    console.log(questionNumber);
+  }
+});
